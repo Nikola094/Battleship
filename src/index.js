@@ -40,14 +40,23 @@ class Gameboard {
 class Ship {
     constructor(length){
         this.length = length;
-        this.hits = []
+        this.hits = 0;
     }
     hit(){
-        this.hits.push('hit')
+        this.hits++
     }
     isSunk(){
-        return this.hits.length === this.length;
+        return this.hits === this.length;
     }
 }
 
-module.exports = {Gameboard, Ship};
+class Player {
+    constructor(name){
+        this.name = name;
+        this.gameboard = new Gameboard()
+    }
+    attack(enemyBoard, x,y){
+        enemyBoard.takeDamage(x,y )
+    }
+}
+module.exports = {Gameboard, Ship, Player};
