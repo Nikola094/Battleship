@@ -1,6 +1,6 @@
 // board is 10x10 per player, create a grid like element where each player can place up to five ships 
 // ship sizes are carrier(5 space) , battlship(4 space), cruiser(3 space), destroyer(2 space) - 17/20 spaces are filled
-// 
+import './styles.css';
 class Gameboard {
     constructor(){
         this.board = Array(10).fill(null).map(() => Array(10).fill(null));
