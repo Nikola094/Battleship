@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/dom-render.js', 
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -16,18 +16,19 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],  // Inject CSS into JS bundle
+        use: ['style-loader', 'css-loader'],  
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,      // For images and SVGs
-        type: 'asset/resource',               // Emits files into /dist
+        test: /\.(png|jpe?g|gif|svg)$/i,      
+        type: 'asset/resource',               
       },
     ],
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
+    static: [
+      { directory: path.join(__dirname, 'public') }, 
+      { directory: path.join(__dirname, 'dist') },   
+    ],
     compress: true,
     port: 9000,
   },

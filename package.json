@@ -2,7 +2,7 @@
   "name": "battleship",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dom-render.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development --open",

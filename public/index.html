@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <h1 id="title">Battleships</h1>
@@ -28,7 +27,16 @@
         </div>
     </div>
     <p id="turn-message"></p>
-    <div id="gameboard"></div>
+    <div id="flip-buttons">
+    <button class="player1-button">Flip direction</button>
+    <button class="player2-button">Flip direction</button>
+    </div>
+    <div id="container">
+        <div id="player1-board">
+        </div>
+        <div id="player2-board">
+        </div>
+    </div>
     <script src="bundle.js"></script>
 </body>
 </html>
